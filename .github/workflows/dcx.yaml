@@ -1,0 +1,16 @@
+name: Test DCX Custom Action Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  dcx-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Client Code
+        uses: actions/checkout@v3
+
+      - name: Run DCX Custom Action
+        uses: Crisiswastaken/dcx-public-action@main
